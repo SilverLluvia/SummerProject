@@ -75,7 +75,6 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   align-items: flex-start;
 }
 .sentence p {
-  font-family: 'NanumSquareRound';
   font-size: 1.9rem;
   font-weight: 700;
   padding-left: 1.2rem;
