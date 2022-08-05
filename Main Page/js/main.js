@@ -1,11 +1,11 @@
-const main = document.querySelector('#main');
+const mainSection = document.querySelector('#main');
 const section1 = document.querySelector('#section1');
 const section2 = document.querySelector('#section2');
 const section3 = document.querySelector('#section3');
 const section4 = document.querySelector('#section4');
 const section5 = document.querySelector('#section5');
 const result = document.querySelector('#result');
-const pages = [ main, section1, section2, section3, section4, section5, result];
+const pages = [ mainSection, section1, section2, section3, section4, section5, result];
 let wordChoice = [ "", "", "", "", "" ];
 
 const beforeBtn = document.querySelectorAll('.beforeButton');
@@ -124,7 +124,7 @@ for (const button of nextBtn) {
 
 function start() {
   setTimeout(() => {
-    main.style.display = "none";
+    mainSection.style.display = "none";
     section1.style.display = "flex";
     page = 1;
   }, 100)
