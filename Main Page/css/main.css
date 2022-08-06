@@ -9,7 +9,7 @@
   box-sizing: border-box; 
   word-break: keep-all;
   word-wrap: break-word;
-  font-family: 'NanumSquareRound',sans-serif;
+  font-family: 'NanumSquareRound', sans-serif;
 }
 #container {
   display: flex;
@@ -218,7 +218,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
     justify-content: center;
   }
   .buttonBar {
-    width: 64rem;
+    width: 65vw;
     height: 5vh;
     margin-bottom: 12vh;
   }
