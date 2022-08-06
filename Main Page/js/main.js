@@ -77,11 +77,11 @@ function addWordChoice() {
 function changeSentence() {
   /* 나중에 result 페이지 생기면 수정... */
     const s = document.querySelectorAll('.sentence');
-    s[1].querySelector('span').innerHTML = wordChoice[0];  
-    s[2].querySelector('span').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]);
-    s[3].querySelector('span').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2]; 
-    s[4].querySelector('span').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]); 
-    s[5].querySelector('span').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]) + " " + wordChoice[4] ;   
+    s[1].querySelector('p').innerHTML = wordChoice[0];  
+    s[2].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]);
+    s[3].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2]; 
+    s[4].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]); 
+    s[5].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]) + " " + wordChoice[4] ;   
 }
 
 function changeColorPalette() {
