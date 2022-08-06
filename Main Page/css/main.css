@@ -184,7 +184,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
 
 
 /* desktop */
-@media screen and (min-width: 500px) { 
+@media screen and (min-width: 1024px) { 
   #startButton:hover {
     color:#fff;
     background-color: #000;
@@ -244,7 +244,68 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   }
 }
 
-@media screen and (max-width: 424px) {
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  #startButton:hover {
+    color:#fff;
+    background-color: #000;
+  }
+  #startButton:hover svg path {
+    fill: #fff;
+  }
+  .colorPalette {
+    margin-top: 5vh;
+    height: 15vh;
+  }
+  #resultColorPalette {
+    margin-top: 0;
+    height: 13vh;
+  }
+  .sentence {
+    height: 15vh;
+    margin-top: 0;
+    margin-bottom: 5vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .sentence p {
+    padding-left: 0;
+  }
+  .wordBox {
+    width: 38rem;
+    height: 30vh;
+    margin-bottom: 10vh;
+    justify-content: center;
+  }
+  .buttonBar {
+    width: 80vw;
+    height: 5vh;
+    margin-bottom: 12vh;
+  }
+  .beforeButton, .nextButton {
+    width: 7rem;
+  }
+  .beforeButton:hover, .nextButton:hover {
+    background-color: #000;
+  }
+  .beforeButton:hover svg path, .nextButton:hover svg path {
+    fill: #fff;
+  }
+  #goResultButton {
+    width: 15.5rem;
+    height: 4rem;
+    margin-top: 5vh;
+  }
+  #goResultButton:hover {
+    background-color: #000;
+  }
+  #goResultButton:hover svg path {
+    fill: #fff;
+  }
+} 
+
+/* mobile */
+@media screen and (max-width: 420px) {
   #startButton {
     height: 4.7rem;
     line-height: 4.7rem;
