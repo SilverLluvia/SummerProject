@@ -77,8 +77,11 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
 .sentence p {
   font-size: 1.9rem;
   font-weight: 700;
-  padding-left: 1.2rem;
+  padding-left: 1rem;
   text-align: start;
+}
+#section4 .sentence p, #section5 .sentence p {
+  padding-left: 0.7rem;
 }
 #result .sentence {
   justify-content: center;

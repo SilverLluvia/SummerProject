@@ -6,6 +6,8 @@ const section4 = document.querySelector('#section4');
 const section5 = document.querySelector('#section5');
 const result = document.querySelector('#result');
 const pages = [ mainSection, section1, section2, section3, section4, section5, result];
+var page = 0;
+
 let wordChoice = [ "", "", "", "", "" ];
 
 const beforeBtn = document.querySelectorAll('.beforeButton');
@@ -19,7 +21,7 @@ const btnColorList = [  // 9, 10, 10, 9, 9
   { color: ['#FFDB94','#34C700','#6AD1C5','#FFCDC2','#FFD1A7','#ACE4EC','#E0945C','#DAFAFF','#A7A5FF'] }
 ];
 
-const wordList = [
+const wordList = [    // 9, 10, 10, 9, 9
   { word: ['반짝반짝', '몽글몽글', '보들보들', '바삭바삭', '말랑말랑', '뚝딱뚝딱', '두근두근', '살랑살랑', '푸릇푸릇'] },
   { word: ['나무', '무지개', '물방울', '구름', '시계', '벽돌', '과일', '창문', '상자', '눈물'] },
   { word: ['놀란', '따뜻한', '여유로운', '느린', '평화로운', '특별한', '시원한', '한가로운', '빠른', '조용한'] },
@@ -27,8 +29,27 @@ const wordList = [
   { word: ['비추다', '뒤집다', '흩뿌리다', '바라보다', '만지다', '날리다', '쓸다', '듣다', '돌리다'] }
 ];
 
-const wordColorMap = new Map();
+const postObjectList = [
+  '를', '를', '을', '을', '를', '을', '을', '을', '를', '을'
+  /* '나무', '무지개', '물방울', '구름', '시계', '벽돌', '과일', '창문', '상자', '눈물' */
+];
 
+const postSubjectList = [
+  '가', '가', '이', '가', '가', '이', '가', '가', '가'
+  /* '갈매기', '앵무새', '산양', '플라밍고', '사자', '수탉', '다람쥐', '고양이', '백조' */
+];
+
+const postObjectMap = new Map();
+for (let i = 0 ; i < wordList[1].word.length ; i++) {
+  postObjectMap.set(wordList[1].word[i], postObjectList[i]);
+}
+
+const postSubjectMap = new Map();
+for (let i = 0 ; i < wordList[3].word.length ; i++) {
+  postSubjectMap.set(wordList[3].word[i], postSubjectList[i]);
+}
+
+const wordColorMap = new Map();
 for (let i = 0 ; i < wordList.length; i++) {
   for (let j = 0; j < wordList[i].word.length; j++)
     wordColorMap.set(wordList[i].word[j], btnColorList[i].color[j]);
@@ -36,11 +57,6 @@ for (let i = 0 ; i < wordList.length; i++) {
 
 addButtonColor();
 addWordChoice();
-
-/* if (pages[1].querySelectorAll('wordBox button')[0].addEventListener('click', ()=> {
-  console.log("btn1 clicked!");
-}
-)) */
 
 function addWordChoice() {
   for (let i = 1 ; i <= wordList.length ; i++) {
@@ -61,17 +77,17 @@ function addWordChoice() {
 function changeSentence() {
   /* 나중에 result 페이지 생기면 수정... */
     const s = document.querySelectorAll('.sentence');
-    s[1].querySelector('p').innerHTML = wordChoice[0] + "한 ";  
-    s[2].querySelector('p').innerHTML = wordChoice[0] + "한 " + wordChoice[1] + "을 ";
+    s[1].querySelector('p').innerHTML = wordChoice[0];  
+    s[2].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]);
     if (window.innerWidth < 1024) {
-      s[3].querySelector('p').innerHTML = wordChoice[0] + "한 " + wordChoice[1] + "을 " + wordChoice[2] + "<br>"; 
-      s[4].querySelector('p').innerHTML = wordChoice[0] + "한 " + wordChoice[1] + "을 " + wordChoice[2] + "<br>" + wordChoice[3] + "가 "; 
-      s[5].querySelector('p').innerHTML = wordChoice[0] + "한 " + wordChoice[1] + "을 " + wordChoice[2] + "<br>" + wordChoice[3] + "가 " + wordChoice[4] ;   
+      s[3].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + "<br>"; 
+      s[4].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + "<br>" +  wordChoice[3] + postSubjectMap.get(wordChoice[3]); 
+      s[5].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + "<br>" +  wordChoice[3] + postSubjectMap.get(wordChoice[3]) + " " + wordChoice[4] ;   
     }
     else {
-      s[3].querySelector('p').innerHTML = wordChoice[0] + "한 " + wordChoice[1] + "을 " + wordChoice[2] + " "; 
-      s[4].querySelector('p').innerHTML = wordChoice[0] + "한 " + wordChoice[1] + "을 " + wordChoice[2] + " " + wordChoice[3] + "가 "; 
-      s[5].querySelector('p').innerHTML = wordChoice[0] + "한 " + wordChoice[1] + "을 " + wordChoice[2] + " " + wordChoice[3] + "가 " + wordChoice[4] ;   
+      s[3].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2]; 
+      s[4].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]); 
+      s[5].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]) + " " + wordChoice[4] ;   
     }
 }
 
@@ -93,9 +109,9 @@ function changeOtherButtonColor(b) {
     });
 }
 
-function makeButton() {
+/* function makeButton() {
 
-}
+} */
 
 function addButtonColor() {
   for (let i = 0 ; i < btnColorList.length ; i++) {
@@ -111,8 +127,6 @@ function addButtonColor() {
     }
   }
 }
-
-var page = 0;
 
 document.getElementById('startButton').addEventListener('click', start);
 for (const button of beforeBtn) {
