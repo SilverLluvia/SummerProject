@@ -91,7 +91,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
 #result .sentence {
   justify-content: center;
 }
-#result .sentence span {
+#result .sentence p {
   padding-left: 0;
   text-align: center;
 }
@@ -204,7 +204,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
     align-items: center;
     text-align: center;
   }
-  .sentence span {
+  .sentence p {
     padding-left: 0;
   }
   .wordBox {
@@ -264,7 +264,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
     align-items: center;
     text-align: center;
   }
-  .sentence span {
+  .sentence p {
     padding-left: 0;
   }
   .wordBox {
@@ -310,7 +310,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
     width: 54px;
     height: 30px;
   }
-  .sentence span {
+  .sentence p {
     font-size: 1.7rem;
   }
   .wordBox button {
