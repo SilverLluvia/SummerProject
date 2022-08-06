@@ -79,16 +79,9 @@ function changeSentence() {
     const s = document.querySelectorAll('.sentence');
     s[1].querySelector('p').innerHTML = wordChoice[0];  
     s[2].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]);
-    /* if (window.innerWidth < 1024) {
-      s[3].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + "<br>"; 
-      s[4].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + "<br>" +  wordChoice[3] + postSubjectMap.get(wordChoice[3]); 
-      s[5].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + "<br>" +  wordChoice[3] + postSubjectMap.get(wordChoice[3]) + " " + wordChoice[4] ;   
-    }
-    else { */
-      s[3].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2]; 
-      s[4].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]); 
-      s[5].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]) + " " + wordChoice[4] ;   
-    
+    s[3].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2]; 
+    s[4].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]); 
+    s[5].querySelector('p').innerHTML = wordChoice[0] + " " + wordChoice[1] + postObjectMap.get(wordChoice[1]) + " " + wordChoice[2] + " " + wordChoice[3] + postSubjectMap.get(wordChoice[3]) + " " + wordChoice[4] ;   
 }
 
 function changeColorPalette() {
