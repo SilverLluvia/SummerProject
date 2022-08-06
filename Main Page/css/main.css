@@ -256,9 +256,6 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   .sentence p {
     font-size: 1.7rem;
   }
-  .wordBox {
-    width: 80vw;
-  }
   .wordBox button {
     height: 3.5rem;
     line-height: 3.5rem;
@@ -277,6 +274,9 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   }
   .wordBox .wordButtonFour {
     width: 8.7rem;
+  }
+  .buttonBar {
+    width: 85vw;
   }
   .beforeButton, .nextButton {
     width: 4rem;
