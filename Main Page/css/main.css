@@ -1,9 +1,9 @@
 * {
   margin: 0;
   box-sizing: border-box; 
-  font-family: 'NanumSquareRound';
   word-break: keep-all;
   word-wrap: break-word;
+  font-family: 'NanumSquareRound',sans-serif;
 }
 #container {
   display: flex;
@@ -18,7 +18,6 @@ section {
   align-items: center;
 }
 
-
 #main {
   display: flex;
   justify-content: center;
@@ -31,7 +30,7 @@ section {
   line-height: 4.5rem;
   border: 1px solid #000;
   border-radius: 3.6rem;
-  font-family: 'Coda';
+  font-family: 'Coda' !important;
   font-weight: 400;
   font-size: 1.9rem;
   text-align: center;
@@ -39,11 +38,13 @@ section {
 #startButton svg {
   margin-bottom: 0.2rem;
 }
-/* #startButton:active { 
-  color: #fff;
+#startButton:active {
+  color:#fff;
   background-color: #000;
-} */
-
+}
+#startButton:active svg path {
+  fill: #fff;
+}
 section:not(#main) {    /* main 제외 section들은 초기 display를 none으로 설정 */
   display: none;
 }
@@ -92,7 +93,6 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   padding-left: 0;
   text-align: center;
 }
-
 
 .wordBox {
   width: 85vw;
@@ -146,7 +146,6 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   height: 4.5rem;
   border: 1px solid #000;
   border-radius: 2.7rem;
-  font-family: 'Coda';
   font-weight: 400;
   font-size: 2.3rem;
   text-align: center;
@@ -155,6 +154,12 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   color:#fff;
   background-color: #000;
 } */
+.beforeButton:active, .nextButton:active {
+  background-color: #000;
+}
+.beforeButton:active svg path, .nextButton:active svg path {
+  fill: #fff;
+}
 #goResultButton {
   all: unset;
   cursor: pointer;
@@ -164,14 +169,15 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   margin-top: 8rem;
   border: 1px solid #000;
   border-radius: 3.6rem;
-  font-family: 'Coda';
   font-weight: 400;
   font-size: 2.4rem;
   text-align: center;
 }
 #goResultButton:active {
-  color:#fff;
   background-color: #000;
+}
+#goResultButton:active svg path {
+  fill: #fff;
 }
 
 
@@ -220,7 +226,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   .beforeButton:hover, .nextButton:hover {
     background-color: #000;
   }
-  .beforeButton:hover svg path, .nextButton:hover path {
+  .beforeButton:hover svg path, .nextButton:hover svg path {
     fill: #fff;
   }
   #goResultButton {
