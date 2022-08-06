@@ -3,7 +3,9 @@
   font-family: "NanumSquareRound";
   font-style: normal;
   font-weight: 400;
-  src: local("NanumSquareRoundR"), /* computer */
+  src: 
+  /* local("NanumSquareRoundR"), */
+   /* computer */
     url("NanumSquareRoundR.eot"), /* IE9 Compat Modes */
     url("NanumSquareRoundR.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
     url("NanumSquareRoundR.woff2") format("woff2"), /* Modern Browsers */    
