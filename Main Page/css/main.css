@@ -2,6 +2,8 @@
   margin: 0;
   box-sizing: border-box; 
   font-family: 'NanumSquareRound';
+  word-break: keep-all;
+  word-wrap: break-word;
 }
 #container {
   display: flex;
@@ -54,7 +56,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   align-items: flex-start; 
 }
 #resultColorPalette {
-  margin-top: 11.5vh;
+  margin-top: 2vh;
 }
 .colorButton {
   all: unset;
@@ -82,9 +84,6 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   font-weight: 700;
   padding-left: 1rem;
   text-align: start;
-}
-#section4 .sentence p, #section5 .sentence p {
-  padding-left: 0.7rem;
 }
 #result .sentence {
   justify-content: center;
@@ -191,7 +190,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   }
   #resultColorPalette {
     margin-top: 0;
-    align-items: center;
+    height: 13vh;
   }
   .sentence {
     height: 15vh;
@@ -248,7 +247,6 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   }
   .sentence p {
     font-size: 1.7rem;
-    padding-left: 0.8rem;
   }
   .wordBox button {
     height: 3.5rem;
