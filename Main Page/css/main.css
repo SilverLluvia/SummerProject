@@ -25,14 +25,17 @@ section {
   all: unset;
   cursor: pointer;
   width: 12rem;
-  height: 5rem;
-  line-height: 5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
   border: 1px solid #000;
   border-radius: 3.6rem;
   font-family: 'Coda';
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   text-align: center;
+}
+#startButton svg {
+  margin-bottom: 0.2rem;
 }
 /* #startButton:active { 
   color: #fff;
@@ -158,7 +161,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   cursor: pointer;
   width: 16rem;
   height: 4.5rem;
-  line-height: 4.5rem;
+  line-height: 1rem;
   margin-top: 8rem;
   border: 1px solid #000;
   border-radius: 3.6rem;
@@ -178,6 +181,9 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   #startButton:hover {
     color:#fff;
     background-color: #000;
+  }
+  #startButton:hover svg path {
+    fill: #fff;
   }
   .colorPalette {
     margin-top: 5vh;
@@ -213,18 +219,21 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
     width: 7rem;
   }
   .beforeButton:hover, .nextButton:hover {
-    color:#fff;
     background-color: #000;
+  }
+  .beforeButton:hover svg path, .nextButton:hover path {
+    fill: #fff;
   }
   #goResultButton {
     width: 15.5rem;
     height: 4rem;
-    line-height: 4rem;
     margin-top: 5vh;
   }
   #goResultButton:hover {
-    color:#fff;
     background-color: #000;
+  }
+  #goResultButton:hover svg path {
+    fill: #fff;
   }
 }
 
@@ -268,6 +277,5 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   }
   #goResultButton {
     height: 4rem;
-    line-height: 4rem;
   }
 }
