@@ -81,7 +81,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
   justify-content: flex-start;
   align-items: flex-start;
 }
-.sentence p {
+.sentence span {
   font-size: 1.9rem;
   font-weight: bold;
   padding-left: 1rem;
@@ -90,7 +90,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
 #result .sentence {
   justify-content: center;
 }
-#result .sentence p {
+#result .sentence span {
   padding-left: 0;
   text-align: center;
 }
@@ -203,7 +203,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
     align-items: center;
     text-align: center;
   }
-  .sentence p {
+  .sentence span {
     padding-left: 0;
   }
   .wordBox {
@@ -263,7 +263,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
     align-items: center;
     text-align: center;
   }
-  .sentence p {
+  .sentence span {
     padding-left: 0;
   }
   .wordBox {
@@ -309,7 +309,7 @@ section:not(#main) {    /* main 제외 section들은 초기 display를 none으�
     width: 54px;
     height: 30px;
   }
-  .sentence p {
+  .sentence span {
     font-size: 1.7rem;
   }
   .wordBox button {
