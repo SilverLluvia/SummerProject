@@ -159,7 +159,7 @@ function goResultPage() {
   const resultBtn = document.getElementById('goResultButton');
   resultBtn.addEventListener('click', () => {
     scoreCalculation();
-    let link = "../ResultPage/result_" + placeArray.indexOf(resultPlace) + ".html";
+    let link = "result_" + placeArray.indexOf(resultPlace) + ".html";
     window.location.href = link;
   });
 }
